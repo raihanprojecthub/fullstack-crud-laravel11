@@ -12,7 +12,7 @@
   <h1 class="text-center mt-3">Selamat datang di aplikasi CRUD Laravel 11</h1>
   
   <div class="text-center">
-    <a href="" class="btn btn-primary">Kelola Produk</a>
+    <a href="{{ route('product.home') }}" class="btn btn-primary">Kelola Produk</a>
   </div>
     
 </body>

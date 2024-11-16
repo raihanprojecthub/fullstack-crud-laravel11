@@ -7,4 +7,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/product', [ProductController::class, 'home'])->name('product.home');
+Route::get('/home', [ProductController::class, 'home'])->name('product.home');
+Route::get('/product/tambah', [ProductController::class, 'tambah'])->name('product.tambah');
+Route::post('/product/submit', [ProductController::class, 'submit'])->name('product.submit');
