@@ -15,11 +15,11 @@
       <td>{{ $data->product_name }}</td>
       <td>{{ $data->price }}</td>
       <td class="d-flex gap-1">
-        <a href="" class="btn btn-sm btn-info text-white">Update</a>
-        <form action="}" method="post">
-        @csrf
-        <button class="btn btn-sm btn-danger">Hapus</button>
-      </form>
+        <a href="{{ route('product.edit', $data->id) }}" class="btn btn-sm btn-info text-white">Update</a>
+        <form action="{{ route('product.delete', $data->id) }}" method="post">
+          @csrf
+          <button class="btn btn-sm btn-danger">Hapus</button>
+        </form>
       </td>
     </tr>
   @endforeach
