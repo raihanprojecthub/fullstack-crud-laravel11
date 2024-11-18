@@ -10,7 +10,7 @@ class ProductController extends Controller
     function home() {
         $product = Product::get();
         // dd($product);
-        return view('product.home', compact('product'));
+        return view('home', compact('product'));
     }
 
     function tambah() {
@@ -23,7 +23,7 @@ class ProductController extends Controller
         $product->price = $request->price;
         $product->save();
         
-        return redirect()->route('product.home');
+        return redirect()->route('home');
     }
 
     function edit($id) {
@@ -37,14 +37,14 @@ class ProductController extends Controller
         $product->price = $request->price;
         $product->update();
 
-        return redirect()->route('product.home');
+        return redirect()->route('home');
     }
 
     function delete($id) {
         $product = Product::find($id);
         $product->delete();
 
-        return redirect()->route('product.home');
+        return redirect()->route('home');
     }
 
 }

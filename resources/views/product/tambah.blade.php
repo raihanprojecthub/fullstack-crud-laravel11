@@ -15,7 +15,7 @@
 
     <div class="div d-flex gap-1">
       <button class="btn btn-primary">Submit</button>
-      <a href="{{ route("product.home") }}" class="btn btn-danger">Cancel</a>
+      <a href="{{ route("home") }}" class="btn btn-danger">Cancel</a>
     </div>
   </form>
 </div>
